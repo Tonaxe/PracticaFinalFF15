@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/logInFragment">
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.a1pos99f.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logoFragment"
+        android:name="com.example.a1pos99f.LogoFragment"
+        android:label="fragment_logo"
+        tools:layout="@layout/fragment_logo" >
+        <action
+            android:id="@+id/action_logoFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.a1pos99f.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/drawer1Fragment"
+        android:name="com.example.a1pos99f.Drawer1Fragment"
+        android:label="fragment_drawer1"
+        tools:layout="@layout/fragment_drawer1" />
+    <fragment
+        android:id="@+id/drawer2Fragment"
+        android:name="com.example.a1pos99f.Drawer2Fragment"
+        android:label="fragment_drawer2"
+        tools:layout="@layout/fragment_drawer2" />
+    <fragment
+        android:id="@+id/drawer3Fragment"
+        android:name="com.example.a1pos99f.Drawer3Fragment"
+        android:label="fragment_drawer3"
+        tools:layout="@layout/fragment_drawer3" />
+    <fragment
+        android:id="@+id/bottom1Fragment"
+        android:name="com.example.a1pos99f.Bottom1Fragment"
+        android:label="fragment_bottom1"
+        tools:layout="@layout/fragment_bottom1" >
+        <action
+            android:id="@+id/action_bottom1Fragment_to_recyclerElementosFragment"
+            app:destination="@id/recyclerElementosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottom2Fragment"
+        android:name="com.example.a1pos99f.Bottom2Fragment"
+        android:label="fragment_bottom2"
+        tools:layout="@layout/fragment_bottom2" />
+    <fragment
+        android:id="@+id/bottom3Fragment"
+        android:name="com.example.a1pos99f.Bottom3Fragment"
+        android:label="fragment_bottom3"
+        tools:layout="@layout/fragment_bottom3" />
+    <fragment
+        android:id="@+id/mostrarElementoFragment"
+        android:name="com.example.a1pos99f.MostrarElementoFragment"
+        android:label="fragment_mostrar_elemento"
+        tools:layout="@layout/fragment_mostrar_elemento" />
+    <fragment
+        android:id="@+id/nuevoElementoFragment"
+        android:name="com.example.a1pos99f.NuevoElementoFragment"
+        android:label="fragment_nuevo_elemento"
+        tools:layout="@layout/fragment_nuevo_elemento" />
+    <fragment
+        android:id="@+id/recyclerElementosFragment"
+        android:name="com.example.a1pos99f.RecyclerElementosFragment"
+        android:label="fragment_recycler_elementos"
+        tools:layout="@layout/fragment_recycler_elementos" >
+        <action
+            android:id="@+id/action_recyclerElementosFragment_to_nuevoElementoFragment"
+            app:destination="@id/nuevoElementoFragment" />
+        <action
+            android:id="@+id/action_recyclerElementosFragment_to_mostrarElementoFragment"
+            app:destination="@id/mostrarElementoFragment" />
+    </fragment>
+
+</navigation>
