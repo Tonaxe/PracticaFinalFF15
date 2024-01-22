@@ -9,11 +9,9 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-
 public class Bottom1Fragment extends Fragment {
 
     public Bottom1Fragment() {
-
     }
 
     public static Bottom1Fragment newInstance(String param1, String param2) {
@@ -27,9 +25,13 @@ public class Bottom1Fragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Obtén el NavController y navega automáticamente
+        // Obtén el NavController
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
-        navController.navigate(R.id.action_bottom1Fragment_to_recyclerElementosFragment);
+
+        // Verifica el destino actual antes de navegar
+        if (navController.getCurrentDestination().getId() == R.id.bottom1Fragment) {
+            navController.navigate(R.id.action_bottom1Fragment_to_recyclerElementosFragment);
+        }
     }
 
     @Override
